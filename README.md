@@ -16,7 +16,7 @@ Users should be able to:
 ![](opeyimika-sudo.github.com/repository/images/resp-design-2.jpg)
 
 ### Links
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL: (https://opeyimika-sudo.github.io/interactive-component-rating/)
 
 
 ### Built with

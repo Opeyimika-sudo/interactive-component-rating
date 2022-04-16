@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link href="styles.css" rel="stylesheet">
+
+
+</head>
+<body class="container">
+  <section id="ratings">
+    <header>
+      <img src="images/icon-star.svg" alt="">
+    </header>
+
+    <!-- Rating state start -->
+    <main>
+      <h3>How did we do?</h3>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <div class="buttons">
+        <button  class='numbers' id="number-1">1</button>
+        <button  class='numbers' id="number-2">2</button>
+        <button  class='numbers' id="number-3">3</button>
+        <button  class='numbers' id="number-4">4</button>
+        <button  class='numbers' id="number-5">5</button>
+      </div>  
+
+      <div class="submit">
+        <button id="submitButton">SUBMIT</button>
+      </div>
+    </main>
+  </section>
+  <!-- Rating state end -->
+
+
+  <!-- Thank you state start -->
+  <section id="thanks">
+    <header>
+      <img src="images/illustration-thank-you.svg" alt="">
+    </header>
+    <main>
+      <p>You selected <span id="rating"> </span><!-- Add rating here --> out of 5</p>
+
+      <h3>Thank you!</h3>
+
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!</p>
+    </main>
+  </section> 
+  <!-- Thank you state end -->
+
+  <footer id="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://twitter.com/LifeOfOpeyimika">Opeyimika</a>
+    </div>
+  </footer>  
+</body>
+<script>
+     
+  const numberOne = document.getElementById('number-1');
+  const numberTwo = document.getElementById('number-2');
+  const numberThree = document.getElementById('number-3');
+  const numberFour = document.getElementById('number-4');
+  const numberFive = document.getElementById('number-5')
+
+  let numbers = [numberOne, numberTwo, numberThree, numberFour, numberFive];
+
+      for (let i in numbers){
+        numbers[i].addEventListener ('click', function () {
+         if (numbers[i].classList.contains('numbers') == true) {
+          numberValue = parseInt(i) + 1;
+          numbers[i].classList.replace('numbers', 'active');
+          let j = 0;
+          if (j < i) {
+            while (j < i){
+              numbers[j].classList.replace('active', 'numbers');
+              j++;
+            } 
+          }
+          let k = 4;
+          if (k > i){
+              while (k > i) {
+                      numbers[k].classList.replace('active', 'numbers');
+                      k--;
+                    }
+         } 
+         }   
+        else if (numbers[i].classList.contains('numbers') == false) {
+            numbers[i].classList.replace('active', 'numbers')
+        }
+      }
+    )
+}
+
+
+  const submitButton = document.getElementById('submitButton');
+  submitButton.addEventListener("click", submitInput);
+
+
+  function submitInput(e) {
+    if (numberValue == "" || numberValue == undefined) {
+        e.preventDefault(); 
+    } 
+    else if (numberValue == 1) {
+      document.getElementById('ratings').style.display = "none";
+      document.getElementById('thanks').style.display = "block";
+      document.getElementById('rating').textContent += numberValue;
+    }
+    else if (numberValue == 2) {
+      document.getElementById('ratings').style.display = "none";
+      document.getElementById('thanks').style.display = "block";
+      document.getElementById('rating').textContent += numberValue;
+    }
+    else if (numberValue == 3) {
+      document.getElementById('ratings').style.display = "none";
+      document.getElementById('thanks').style.display = "block";
+      document.getElementById('rating').textContent += numberValue;
+    }
+    else if (numberValue == 4) {
+      document.getElementById('ratings').style.display = "none";
+      document.getElementById('thanks').style.display = "block";
+      document.getElementById('rating').textContent += numberValue;
+    }
+    else if (numberValue == 5) {
+      document.getElementById('ratings').style.display = "none";
+      document.getElementById('thanks').style.display = "block";
+      document.getElementById('rating').textContent += numberValue;
+    }
+    else {
+      e.preventDefault() ;
+    }
+  }
+  
+</script>
+</html>

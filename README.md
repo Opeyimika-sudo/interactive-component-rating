@@ -12,8 +12,8 @@ Users should be able to:
 - See the "Thank you" card state after submitting a rating
 
 ### Screenshot
-![](opeyimika-sudo.github.com/interactive-component-rating/images/resp-design-3.jpg)
-![](opeyimika-sudo.github.com/interactive-component-rating/images/resp-design-2.jpg)
+![Screenshot of the Ratings Page](images/resp-design-3.jpg)
+![Screenshot of the "Thank You" Page](images/resp-design-2.jpg)
 
 ### Links
 - Live Site URL: (https://opeyimika-sudo.github.io/interactive-component-rating/)

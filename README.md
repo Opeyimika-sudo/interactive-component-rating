@@ -12,8 +12,8 @@ Users should be able to:
 - See the "Thank you" card state after submitting a rating
 
 ### Screenshot
-![](.images/resp-design-3.jpg)
-![](.images/resp-design-2.jpg)
+![](opeyimika-sudo.github.com/repository/images/resp-design-3.jpg)
+![](opeyimika-sudo.github.com/repository/images/resp-design-2.jpg)
 
 ### Links
 - Live Site URL: (https://your-live-site-url.com)
